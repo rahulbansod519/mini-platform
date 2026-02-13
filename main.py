@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from datetime import datetime
 from dotenv import load_dotenv
 # Load environment variables from .env file
@@ -22,10 +22,11 @@ def root():
 
 @app.get("/health")
 def health_check():
-    return {
-        "status": "unhealthy",
-        "timestamp": datetime.utcnow().isoformat()
-    }
+    raise HTTPException(status_code=500, detail="unhealthy")
+    # return {
+    #     "status": "unhealthy",
+    #     "timestamp": datetime.utcnow().isoformat()
+    # }
 
 
 @app.get("/ready")

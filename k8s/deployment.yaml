@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: mini-platform
-          image: rahulbansod519/mini-platform:latest
+          image: rahulbansod519/mini-platform:v3
           ports:
             - containerPort: 8080
           env:
             - name: ENVIRONMENT
               value: "kubernetes"
             - name: APP_VERSION
-              value: "3.0"
+              value: "3.0-broken"
           livenessProbe:
             httpGet:
               path: /health

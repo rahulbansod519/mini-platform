@@ -23,7 +23,7 @@ def root():
 @app.get("/health")
 def health_check():
     return {
-        "status": "healthy",
+        "status": "unhealthy",
         "timestamp": datetime.utcnow().isoformat()
     }
 

@@ -22,11 +22,10 @@ def root():
 
 @app.get("/health")
 def health_check():
-    raise HTTPException(status_code=500, detail="unhealthy")
-    # return {
-    #     "status": "unhealthy",
-    #     "timestamp": datetime.utcnow().isoformat()
-    # }
+    return {
+        "status": "healthy",
+        "timestamp": datetime.utcnow().isoformat()
+    }
 
 
 @app.get("/ready")

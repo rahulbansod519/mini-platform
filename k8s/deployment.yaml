@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mini-platform
-          image: rahulbansod519/mini-platform:v4
+          image: rahulbansod519/mini-platform:v5
           ports:
             - containerPort: 8080
           env:
